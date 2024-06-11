@@ -97,10 +97,10 @@
 
 ## 🧟: 만든 사람들
 
-> 팀장 : [김창민](https://github.com/KCngMn)
-> 팀원 : [이시원](https://github.com/SnowScapes)
-> 팀원 : [정해성](https://github.com/jelly1702)
-> 팀원 : [최재훈](https://github.com/chl1195)
+> 팀장 : [김창민](https://github.com/KCngMn)    
+> 팀원 : [이시원](https://github.com/SnowScapes)    
+> 팀원 : [정해성](https://github.com/jelly1702)    
+> 팀원 : [최재훈](https://github.com/chl1195)    
 
 <br><br>
 
