@@ -75,7 +75,7 @@
 
 ##### Critical Issue!    
 
-> 게임 플레이 중 랜덤하게 게임이 프리징 되는 현상 발생    
+> 1. 게임 플레이 중 랜덤하게 게임이 프리징 되는 현상 발생    
 >    
 > ![randomspawn](https://github.com/SnowScapes/ZCity_Public/assets/39547945/2afef978-e88a-41f0-82bc-542864090bfb)    
 > 
@@ -83,7 +83,14 @@
 > 
 > 해결 방법 : 반복문 사용을 제거하고 Coroutine을 통해 랜덤한 자원이 선택되지 못했을 경우, 다음 프레임에 재시도 하는 방식으로 구조 변경
 >
-> Fixed!
+> Fixed!    
+>
+> 2. 싱글톤 GameManager가 게임 실행시 파괴되고 다시 생성된 후 DontDestroyOnLoad에 들어가며 GameManager에 들어갈 데이터가 초기화되어 GameManager 인스턴스를 불러오는 코드들에서 문제가 발생    
+>
+> 원인 분석 : RootableObject의 Awake에서 GameManager 인스턴스를 불러오는 코드가 실행될 때, GameManager 스크립트의 싱글톤 설정보다 먼저 실행 되어 버릴 경우 GameManager의 gameObject가 Destroy 되어버리는 것
+>
+> 해결 방법 1. GameManager의 인스턴스를 불러오는 코드를 Awake 이후에 실행되도록 코드를 옮겨준다.
+> 해결 방법 2. Script Execution Order를 설정하여 GameManager의 인스턴스 설정이 먼저 실행되도록 해준다. (코어스크립트에서 사용하면 좋음.)
 
 <br><br>
 
