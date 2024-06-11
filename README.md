@@ -75,10 +75,12 @@
 
 ##### Critical Issue!    
 
-> 게임 플레이 중 랜덤하게 게임이 프리징 되는 현상 발생
->
+> 게임 플레이 중 랜덤하게 게임이 프리징 되는 현상 발생    
+>    
+> ![randomspawn](https://github.com/SnowScapes/ZCity_Public/assets/39547945/2afef978-e88a-41f0-82bc-542864090bfb)    
+> 
 > 원인 분석 : 랜덤한 자원을 선택하여 GameObject를 켜주는 반복문에 거치며 프리징이 걸리는 것으로 추정
->
+> 
 > 해결 방법 : 반복문 사용을 제거하고 Coroutine을 통해 랜덤한 자원이 선택되지 못했을 경우, 다음 프레임에 재시도 하는 방식으로 구조 변경
 >
 > Fixed!
